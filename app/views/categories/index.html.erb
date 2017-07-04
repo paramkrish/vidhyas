@@ -1,0 +1,33 @@
+<% provide(:title, "Categories") %>
+<div class='page-header'><h1>List of Categories</h1></div>
+
+
+	<div class=" main_contents">
+	    	<% if @categories.each do |r| %>
+				<% r_item = r.name.html_safe.gsub ' ','-' %>
+				<% r_item = r_item.sub '-$','' %>
+
+					<div class='well'>
+					    <% if r.recipes.category_id(r.id).count > 0 %>		    	
+					    	<a href='/categories/<%=r.id%>/<%=r_item%>'><%=r.name%></a>
+					    	<% else %><a href='/categories/<%=r.id%>/<%=r_item%>'><%=r.name%><%=r.recipes.category_id(r.id)%></a>
+					    	<div>No Recipes in this category</div>
+					    <%end%>
+						
+						<% r.recipes.category_id(r.id).each do |t| %>
+							<% t_title = t.item.html_safe.gsub ' ','-' %>
+							<% t_title = t_title.sub '-$','' %>
+							<div style='    padding: 3px 16px;background: #FFF;border-radius: 10px;margin: 10px;'>
+								<a class='list-group-item-text' href="/recipes/<%=t.id%>/<%=t_title %>"><%=t.item%></a></span>	
+							</div>
+						<%end%>
+					</div>
+
+			<%end%>
+			<%end%>
+	</div>
+
+<BR>
+	 <div><%= link_to  "<span class=' glyphicon glyphicon-plus'></span> Create Category".html_safe, categories_new_path  , class: "btn btn-primary" %>
+	 </div>
+

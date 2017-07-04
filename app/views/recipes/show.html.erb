@@ -1,0 +1,21 @@
+<% provide(:title, "Recipe") %>
+<div class='page-header'><h1><%=@recipe.item%></h1></div>
+<div class='main_contents'>
+          <% if @recipe.category_id %>
+          <div class='badge'>Category </div><div><%= link_to @recipe.category.name, categories_path %></div>
+          <% else %>
+          <div class='badge'>Category </div><div><B>Unassigned </B></div>
+          <% end %>
+		<BR>
+<div class='badge'>Ingredients:</div><BR><BR>
+<div><%=raw(@recipe.ingredients)%></div>
+<BR>
+<p>
+<div class='badge'>Procedure:</div><BR>
+<div><%=raw(@recipe.procedure)%></div>
+</p>
+	</div>
+<div><BR><i>Created On: <%=@recipe.created_at%></i></div>
+
+<BR>
+<div><%= link_to  "<span class=' glyphicon glyphicon-pencil'></span> Edit".html_safe, edit_recipe_path  , class: "btn btn-primary" %></div>

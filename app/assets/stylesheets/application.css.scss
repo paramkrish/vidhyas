@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+div#datetimepicker {position: relative; }
+table td {     padding: 3px !important;vertical-align: middle !important;}
+
+body { font-family: Verdana; background-color: #e6e6e6; 
+    font-size: 12px;}
+hr {     border-top: 1px solid #337ab7; }
+.page-header { border-bottom: 1px solid #337ab7;color:#337ab7;
+    text-shadow: 0px 1px 2px #000000; }
+.main_contents {     background: #FFF;
+    padding: 18px;
+    border-radius: 5px; }
+
+.bold { font-weight:bold;}
+.red { color:red !important; }
+.orange { color:orange !important; }
+.grey { color:grey !important; }
+.green { color:green !important; }
+.pink { color:pink !important;}
+.quickhref { color:#DDD; }
+.quickhref:hover { color:#FFF; }
+.starter-template {   min-height:500px;margin-bottom:100px;}
+
+ #main-container1 {     min-height: 1000px; }
+
+
+.nicon { font-size:20px;}
+.navbar-icon { font-size:30px;}
+div {     font-weight: normal;}
+li.navbar-txt a{
+padding: 7px 14px;
+    margin: 8px;    font-size: 21px;
+    }
+li.navbar-txt a:hover { background:#5cb85c !important;}
+
+.task_actions_lists li { list-style:none;display:inline-block;margin-left: 8px;}
+.task_actions_lists li a { color: #777; text-decoration:none;}
+a.action_link { color: #999; text-decoration:none;}
+a.action_link:hover { color: red;text-decoration:none; }	
+.task_actions_lists li a:hover { color: #000; }	
+.login_box { 
+
+    border: 1px solid #31708f;
+        padding: 4px 10px;
+    background: #337ab7;
+    border-radius: 4px;
+    color:#FFF;
+    }
+
+.footer {     padding: 10px 12px;
+    background: #DDD;
+    height: 40px;
+    bottom: 0px;
+    width: 100%;
+    }
+
+.footer > div {     text-align: center;
+    color: #999;
+    margin-bottom: 8px;}
+
+.profile-img { width:150px;}
+
+
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #337ab7;
+    }
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 6px;
+}
+
+.font-sm { font-size:6px;}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color:#000; }
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus { color: #337ab7; }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #337ab7;}
+
+pre, code {
+ padding:20px;
+ box-sizing:border-box;
+ -moz-box-sizing:border-box;
+ webkit-box-sizing:border-box;
+ display:block; 
+ white-space: pre-wrap; 
+ white-space:pre-line; 
+ white-space: -moz-pre-wrap; 
+ white-space: -pre-wrap; 
+ white-space: -o-pre-wrap; 
+ word-wrap: break-all; 
+ width:100%; overflow-x:auto;
+}
+
+.badge { border-radius: 4px !important;}

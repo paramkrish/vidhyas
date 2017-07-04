@@ -1,0 +1,47 @@
+<% provide(:title, "Create New") %>
+
+<div class='page-header'><h1>New Recipe</h1></div>
+
+<% if @recipe.errors.size > 0 %>
+	<div class='alert alert-danger'>
+		<strong> Error(s) on submission : </strong> 
+		<ul>
+		<% @recipe.errors.full_messages.each do |f| %>
+			<li><%=f%></li>
+		<%end%>
+		</ul>		
+	</div>
+<% end %>
+
+<div class='main_contents'>
+<%= form_for @recipe do |f| %>
+
+			<div class="input-group input-group">
+			<%= f.label :category_id %><br>	
+			<%= f.select :category_id, Category.all.collect { |x| [x.name,x.id] }, { :include_blank => "Select One" } , { :class => 'form-control' } %>
+			</div>
+
+
+			<p>
+			<%= f.label :ItemName %><br>
+			<%= f.text_field :item , :class => 'form-control' %>
+			</p>
+
+			<p>
+			<%= f.label :ingredients %><br>
+			<%= f.cktext_area :ingredients,  :rows => 10, :class => 'ckeditor form-control' %>
+			</p>
+
+			<p>
+			<%= f.label :procedure %><br>
+			<%= f.cktext_area :procedure , :rows => 20, :class => ' ckeditor form-control ' %>
+			</p>
+
+
+<BR>
+		<%= f.button :submit, class: "btn btn-primary" do %>
+		  <span class='glyphicon glyphicon-circle-arrow-up'></span> Submit
+		<% end %>
+<% end %>
+
+</div>

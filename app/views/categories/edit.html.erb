@@ -1,0 +1,25 @@
+<% provide(:title, "Edit My Category") %>
+<div class='page-header'><h1>Edit My Category</h1></div>
+
+<% if @category.errors.size > 0 %>
+	<div class='alert alert-danger'>
+		<strong> Critical Error : </strong> <%= @category.errors.full_messages.first %>
+	</div>
+<% end %>
+
+<BR>
+
+<div class='main_contents'>
+<%= form_for @category do |f| %>
+			<p>
+			<%= f.label :name %><br>
+			<%= f.text_field :name, :class => 'form-control' %>
+			</p>
+
+			<%= f.button :submit, class: "btn btn-primary" do %>
+		  		<span class='glyphicon glyphicon-circle-arrow-up'></span> Update
+			<% end %>
+
+<% end %>
+
+</div>
