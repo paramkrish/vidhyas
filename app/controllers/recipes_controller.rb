@@ -47,11 +47,11 @@ class RecipesController < ApplicationController
       params.require(:recipe).permit(:item,:ingredients,:procedure,:category_id)
   end
 
-def show
-      @recipes = Recipe.all
+  def show
+        @recipes = Recipe.all
 
-    @receipe_id = params[:id].split('-').first or not_found
-    @recipe = Recipe.find(@receipe_id) or not_found    
+      @receipe_id = params[:id].split('-').first or not_found
+      @recipe = Recipe.find(@receipe_id) or not_found    
 end
 
 end
