@@ -17,6 +17,7 @@
 //= require ckeditor/init
 //= require moment
 //= require bootstrap-datetimepicker
+//= require bootstrap-sprockets
 //= require_tree .
 
 setTimeout(function() {    $('.alert,.errormesg,.successmesg').fadeOut();}, 3000); // <-- time in milliseconds
